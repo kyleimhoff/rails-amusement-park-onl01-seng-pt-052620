@@ -1,7 +1,7 @@
 <% if @message %>
   <%= @message %>
 <% end %>
-<% if @user.admin %>
+<% if current_user.admin%>
     <h3><%= 'ADMIN' %></h3>
     <% end %>
 

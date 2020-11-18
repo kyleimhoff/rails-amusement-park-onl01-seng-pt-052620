@@ -24,8 +24,8 @@
   </tbody>
 </table>
 
-<% if @user.admin %>
+<% if current_user.admin %>
   <br><%= link_to 'New Attraction', new_attraction_path %>
 <% else %>
-  <%= link_to "Back", user_path(@user) %>
+  <%= link_to "Back", user_path(current_user) %>
 <% end %>
