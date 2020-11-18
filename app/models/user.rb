@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class User < ActiveRecord::Base
     has_secure_password
   has_many :rides
@@ -9,3 +10,16 @@ class User < ActiveRecord::Base
     end
   end
   end
+=======
+class User < ActiveRecord::Base
+  has_secure_password
+  has_many :rides
+  has_many :attractions, :through => :rides
+
+  def mood
+    unless admin
+      happiness > nausea ? "happy" : "sad"
+    end
+  end
+end
+>>>>>>> b4f61e3f557b1abea4b72f0069efd9c696d74495

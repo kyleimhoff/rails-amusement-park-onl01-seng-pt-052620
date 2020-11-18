@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_11_18_202922) do
 
   create_table "attractions", force: :cascade do |t|
@@ -18,11 +19,26 @@ ActiveRecord::Schema.define(version: 2020_11_18_202922) do
     t.integer "nausea_rating"
     t.integer "happiness_rating"
     t.integer "tickets"
+=======
+ActiveRecord::Schema.define(version: 2020_11_15_000626) do
+
+  create_table "attractions", force: :cascade do |t|
+    t.string "name"
+    t.integer "tickets"
+    t.integer "nausea_rating"
+    t.integer "happiness_rating"
+    t.integer "min_height"
+>>>>>>> b4f61e3f557b1abea4b72f0069efd9c696d74495
   end
 
   create_table "rides", force: :cascade do |t|
     t.integer "user_id"
     t.integer "attraction_id"
+<<<<<<< HEAD
+=======
+    t.index ["attraction_id"], name: "index_rides_on_attraction_id"
+    t.index ["user_id"], name: "index_rides_on_user_id"
+>>>>>>> b4f61e3f557b1abea4b72f0069efd9c696d74495
   end
 
   create_table "users", force: :cascade do |t|
